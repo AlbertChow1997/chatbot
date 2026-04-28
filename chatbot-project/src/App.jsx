@@ -2,10 +2,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import "./App.css";
-import {Chatbot} from "supersimpledev";
+import { ChatInput } from "./component/ChatInput";
 import RobotProfileImage from "./assets/robot.png";
 import UserProfileImage from "./assets/user.png";
-
 
 function ChatMessage({ message, sender }) {
   return (
@@ -68,6 +67,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
