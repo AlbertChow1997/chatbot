@@ -12,7 +12,7 @@ export function OrderSummary({ cart, deliveryOptions }) {
             (deliveryOption) => {
               return deliveryOption.id === cartItem.deliveryOptionId;
             },
-          );
+          ) || deliveryOptions[0];
           return (
             <div key={cartItem.productId} className="cart-item-container">
               <div className="delivery-date">
