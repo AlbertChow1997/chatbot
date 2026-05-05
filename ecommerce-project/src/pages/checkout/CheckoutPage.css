@@ -119,6 +119,40 @@
   margin-left: 3px;
 }
 
+.checkout-page .product-quantity .delete-quantity-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 2px 8px;
+  border: 1px solid rgb(255, 199, 199);
+  border-radius: 4px;
+  color: rgb(177, 39, 4);
+  background-color: rgb(255, 247, 247);
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 1px 2px rgba(177, 39, 4, 0.12);
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+
+.checkout-page .product-quantity .delete-quantity-link:hover {
+  border-color: rgb(177, 39, 4);
+  background-color: rgb(255, 235, 235);
+  box-shadow: 0 2px 5px rgba(177, 39, 4, 0.22);
+  opacity: 1;
+}
+
+.checkout-page .product-quantity .delete-quantity-link:active {
+  background-color: rgb(255, 215, 215);
+  box-shadow: 0 1px 2px rgba(177, 39, 4, 0.16);
+  transform: translateY(1px);
+  opacity: 1;
+}
+
 @media (max-width: 1000px) {
   .checkout-page .delivery-options {
     /* grid-column: 1 means this element will be placed
