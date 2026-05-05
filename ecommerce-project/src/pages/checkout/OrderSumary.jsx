@@ -3,16 +3,15 @@ import { formatMoney } from "../../utils/money";
 import dayjs from "dayjs";
 import { DeliveryOptions } from "./DeliveryOptions";
 
-export function OrderSummary({ cart, deliveryOptions }) {
+export function OrderSummary({ cart, deliveryOptions, loadCart }) {
   return (
     <div className="order-summary">
       {deliveryOptions.length > 0 &&
         cart.map((cartItem) => {
-          const selectedDeliveryOption = deliveryOptions.find(
-            (deliveryOption) => {
+          const selectedDeliveryOption =
+            deliveryOptions.find((deliveryOption) => {
               return deliveryOption.id === cartItem.deliveryOptionId;
-            },
-          ) || deliveryOptions[0];
+            }) || deliveryOptions[0];
           return (
             <div key={cartItem.productId} className="cart-item-container">
               <div className="delivery-date">
@@ -49,6 +48,7 @@ export function OrderSummary({ cart, deliveryOptions }) {
                 <DeliveryOptions
                   deliveryOptions={deliveryOptions}
                   cartItem={cartItem}
+                  loadCart={loadCart}
                 />
               </div>
             </div>
