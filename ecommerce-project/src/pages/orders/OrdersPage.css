@@ -136,14 +136,31 @@
 }
 
 .orders-page .buy-again-button {
+  color: white;
+  background-color: rgb(25, 135, 84);
+  border: 1px solid transparent;
   font-size: 14px;
   width: 140px;
   height: 36px;
   border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(220, 220, 220, 0.5);
+  transition:
+    background-color 0.15s,
+    box-shadow 0.15s;
 
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.orders-page .buy-again-button:hover {
+  background-color: rgb(21, 115, 71);
+}
+
+.orders-page .buy-again-button:active {
+  background-color: rgb(17, 92, 57);
+  box-shadow: none;
 }
 
 .orders-page .buy-again-icon {
